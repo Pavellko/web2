@@ -39,6 +39,7 @@ def read_info():
     global cursor, conn
     cursor.execute(''' SELECT * FROM my_table ''')
     x = cursor.fetchall()
+    ui.listWidget.clear()
     for i in x:
         for ii in i:
             ui.listWidget.addItem(str(ii))
